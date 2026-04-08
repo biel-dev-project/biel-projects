@@ -94,6 +94,110 @@ body {
   color: #c084fc;
 }
 
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* --- Language Switcher --- */
+
+.lang-switcher {
+  position: relative;
+}
+
+.lang-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-family: var(--font);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.lang-btn:hover {
+  border-color: var(--accent);
+  color: var(--text);
+}
+
+.lang-btn-flag {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.lang-arrow {
+  font-size: 0.6rem;
+  opacity: 0.5;
+  transition: var(--transition);
+}
+
+.lang-dropdown.open + .lang-arrow,
+.lang-switcher:has(.lang-dropdown.open) .lang-arrow {
+  transform: rotate(180deg);
+}
+
+.lang-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 6px;
+  min-width: 150px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: var(--transition);
+  z-index: 1001;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.lang-dropdown.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.lang-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 8px 12px;
+  background: none;
+  border: none;
+  border-radius: 6px;
+  color: var(--text-secondary);
+  font-family: var(--font);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.lang-option:hover {
+  background: var(--bg-card-hover);
+  color: var(--text);
+}
+
+.lang-option.active {
+  background: var(--accent-glow);
+  color: var(--accent-light);
+}
+
+.lang-option span {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
 .nav-links {
   display: flex;
   align-items: center;
@@ -946,6 +1050,18 @@ body {
 
   .nav-toggle {
     display: flex;
+  }
+
+  .nav-right {
+    gap: 10px;
+  }
+
+  .lang-btn-label {
+    display: none;
+  }
+
+  .lang-btn {
+    padding: 5px 8px;
   }
 
   .nav-toggle.active span:nth-child(1) {

@@ -13,16 +13,36 @@
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <a href="#hero" class="nav-logo">&lt;gsm /&gt;</a>
-      <button class="nav-toggle" id="navToggle" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav-right">
+        <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-btn" id="langBtn">
+            <span class="lang-btn-flag" id="langFlag">&#127463;&#127479;</span>
+            <span class="lang-btn-label" id="langLabel">PT</span>
+            <span class="lang-arrow">&#9662;</span>
+          </button>
+          <div class="lang-dropdown" id="langDropdown">
+            <button class="lang-option active" data-lang="pt">
+              <span>&#127463;&#127479;</span> Português
+            </button>
+            <button class="lang-option" data-lang="en">
+              <span>&#127468;&#127463;</span> English
+            </button>
+            <button class="lang-option" data-lang="es">
+              <span>&#127466;&#127480;</span> Español
+            </button>
+          </div>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#experiencia">Experiência</a></li>
-        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#sobre" data-i18n="nav_about">Sobre</a></li>
+        <li><a href="#experiencia" data-i18n="nav_experience">Experiência</a></li>
+        <li><a href="#projetos" data-i18n="nav_projects">Projetos</a></li>
         <li><a href="#skills">Skills</a></li>
-        <li><a href="#certificacoes">Certificações</a></li>
-        <li><a href="#contato" class="nav-cta">Contato</a></li>
+        <li><a href="#certificacoes" data-i18n="nav_certs">Certificações</a></li>
+        <li><a href="#contato" class="nav-cta" data-i18n="nav_contact">Contato</a></li>
       </ul>
     </div>
   </nav>
@@ -30,13 +50,13 @@
   <section class="hero" id="hero">
     <div class="hero-bg-grid"></div>
     <div class="hero-content">
-      <div class="hero-badge">Disponível para novos desafios</div>
+      <div class="hero-badge" data-i18n="hero_badge">Disponível para novos desafios</div>
       <h1 class="hero-name">
         Gabriel Souza<br>
         <span class="hero-name-accent">Moreira</span>
       </h1>
-      <p class="hero-title">Engenheiro de DevOps & Automação</p>
-      <p class="hero-subtitle">Integração de Sistemas de TI</p>
+      <p class="hero-title" data-i18n="hero_title">Engenheiro de DevOps & Automação</p>
+      <p class="hero-subtitle" data-i18n="hero_subtitle">Integração de Sistemas de TI</p>
       <div class="hero-tags">
         <span class="tag">Python</span>
         <span class="tag">FastAPI</span>
@@ -47,8 +67,8 @@
         <span class="tag">AI-Assisted Dev</span>
       </div>
       <div class="hero-actions">
-        <a href="#contato" class="btn btn-primary">Entre em contato</a>
-        <a href="#projetos" class="btn btn-outline">Ver projetos</a>
+        <a href="#contato" class="btn btn-primary" data-i18n="hero_cta">Entre em contato</a>
+        <a href="#projetos" class="btn btn-outline" data-i18n="hero_projects">Ver projetos</a>
       </div>
     </div>
     <div class="hero-scroll">
@@ -58,16 +78,16 @@
 
   <section class="section sobre" id="sobre">
     <div class="container">
-      <div class="section-label">01 — Sobre mim</div>
+      <div class="section-label" data-i18n="about_label">01 — Sobre mim</div>
       <div class="sobre-grid">
         <div class="sobre-text">
-          <h2>Construo automações que <span class="highlight">eliminam trabalho manual</span> e conectam sistemas complexos.</h2>
-          <p>
+          <h2 data-i18n="about_heading" data-i18n-html="true">Construo automações que <span class="highlight">eliminam trabalho manual</span> e conectam sistemas complexos.</h2>
+          <p data-i18n="about_p1" data-i18n-html="true">
             Engenheiro de DevOps & Automação com experiência em produção construindo sistemas reais dentro do 
             ambiente corporativo do <strong>Nubank</strong> — incluindo como desenvolvedor principal do 
             <strong>Operária</strong>, plataforma interna de automação em FastAPI integrando 7+ sistemas enterprise.
           </p>
-          <p>
+          <p data-i18n="about_p2">
             Especializado em Python, Shell scripting, integrações via REST API e engenharia assistida por IA 
             utilizando Claude Code, Glean e Cursor. Domínio prático em automação via Jira API, gestão de 
             dispositivos com JAMF Pro e design de workflows escaláveis.
@@ -76,19 +96,19 @@
         <div class="sobre-stats">
           <div class="stat-card">
             <span class="stat-number">7+</span>
-            <span class="stat-label">Sistemas Integrados</span>
+            <span class="stat-label" data-i18n="stat_systems">Sistemas Integrados</span>
           </div>
           <div class="stat-card">
             <span class="stat-number">10+</span>
-            <span class="stat-label">Workflows Automatizados</span>
+            <span class="stat-label" data-i18n="stat_workflows">Workflows Automatizados</span>
           </div>
           <div class="stat-card">
             <span class="stat-number">5</span>
-            <span class="stat-label">Contribuidores Ativos</span>
+            <span class="stat-label" data-i18n="stat_contributors">Contribuidores Ativos</span>
           </div>
           <div class="stat-card">
             <span class="stat-number">3+</span>
-            <span class="stat-label">Anos no Ecossistema</span>
+            <span class="stat-label" data-i18n="stat_years">Anos no Ecossistema</span>
           </div>
         </div>
       </div>
@@ -97,64 +117,64 @@
 
   <section class="section experiencia" id="experiencia">
     <div class="container">
-      <div class="section-label">02 — Experiência</div>
-      <h2 class="section-title">Trajetória Profissional</h2>
+      <div class="section-label" data-i18n="exp_label">02 — Experiência</div>
+      <h2 class="section-title" data-i18n="exp_title">Trajetória Profissional</h2>
 
       <div class="timeline">
         <div class="timeline-item">
           <div class="timeline-marker"></div>
-          <div class="timeline-date">Jan 2026 — Presente</div>
+          <div class="timeline-date" data-i18n="exp1_date">Jan 2026 — Presente</div>
           <div class="timeline-card">
             <div class="timeline-header">
-              <h3>DevOps Engineer — Automação & Plataformas</h3>
+              <h3 data-i18n="exp1_role">DevOps Engineer — Automação & Plataformas</h3>
               <span class="timeline-company">Nubank <span class="via">via Digisystem</span></span>
-              <span class="timeline-location">Híbrido · São Paulo, SP</span>
+              <span class="timeline-location" data-i18n="exp1_location">Híbrido · São Paulo, SP</span>
             </div>
             <ul class="timeline-list">
-              <li>Desenvolvimento de scripts de automação em Python e Shell para processos core de operações de TI</li>
-              <li>Integração bidirecional entre Jira e Snipe-IT via REST APIs — automação de manutenções, check-in/check-out de ativos e atualização em tempo real</li>
-              <li>Pipelines automatizados de relatórios consolidando dados do Jira com envio via Slack webhooks</li>
-              <li>Aplicação de ferramentas AI-first (Claude Code, Claude API, Glean, Cursor) para acelerar ciclos de desenvolvimento</li>
-              <li>Suporte a Zero Touch Deployment (ZTD) para dispositivos Apple corporativos com Jamf Pro</li>
-              <li>Atuação com Kubernetes no contexto de ferramentas internas e operações de plataforma</li>
+              <li data-i18n="exp1_li1">Desenvolvimento de scripts de automação em Python e Shell para processos core de operações de TI</li>
+              <li data-i18n="exp1_li2">Integração bidirecional entre Jira e Snipe-IT via REST APIs — automação de manutenções, check-in/check-out de ativos e atualização em tempo real</li>
+              <li data-i18n="exp1_li3">Pipelines automatizados de relatórios consolidando dados do Jira com envio via Slack webhooks</li>
+              <li data-i18n="exp1_li4">Aplicação de ferramentas AI-first (Claude Code, Claude API, Glean, Cursor) para acelerar ciclos de desenvolvimento</li>
+              <li data-i18n="exp1_li5">Suporte a Zero Touch Deployment (ZTD) para dispositivos Apple corporativos com Jamf Pro</li>
+              <li data-i18n="exp1_li6">Atuação com Kubernetes no contexto de ferramentas internas e operações de plataforma</li>
             </ul>
           </div>
         </div>
 
         <div class="timeline-item">
           <div class="timeline-marker"></div>
-          <div class="timeline-date">Set 2024 — Jan 2026</div>
+          <div class="timeline-date" data-i18n="exp2_date">Set 2024 — Jan 2026</div>
           <div class="timeline-card">
             <div class="timeline-header">
-              <h3>Analista de TI — Aprendiz</h3>
+              <h3 data-i18n="exp2_role">Analista de TI — Aprendiz</h3>
               <span class="timeline-company">Nubank</span>
-              <span class="timeline-location">Híbrido · São Paulo, SP</span>
+              <span class="timeline-location" data-i18n="exp2_location">Híbrido · São Paulo, SP</span>
             </div>
             <ul class="timeline-list">
-              <li>Desenvolvedor principal do <strong>"Operária"</strong> — plataforma modular de automação (FastAPI + OAuth2) que se tornou ferramenta crítica com 5 contribuidores ativos</li>
-              <li>Integrações com 7+ sistemas enterprise: Jira, Snipe-IT, JAMF Pro, Okta, Slack, AWS SES e Rudder</li>
-              <li>Integração completa com Snipe-IT: check-in/check-out automatizado, transições de status, gestão de substatus — tudo disparado por eventos do Jira</li>
-              <li>Schedulers automatizados (5 min) para manutenção, validação de stock requests, rastreamento de replacement e geração de PDFs</li>
-              <li>Integração JAMF Pro / DEP para validação de prestage ZTD</li>
-              <li>Sistema de e-mails multilíngues (BR, MX, CO) com AWS SES para onboarding de novos colaboradores</li>
-              <li>Geração de declarações PDF criptografadas com entrega automática via Slack DM</li>
+              <li data-i18n="exp2_li1" data-i18n-html="true">Desenvolvedor principal do <strong>"Operária"</strong> — plataforma modular de automação (FastAPI + OAuth2) que se tornou ferramenta crítica com 5 contribuidores ativos</li>
+              <li data-i18n="exp2_li2">Integrações com 7+ sistemas enterprise: Jira, Snipe-IT, JAMF Pro, Okta, Slack, AWS SES e Rudder</li>
+              <li data-i18n="exp2_li3">Integração completa com Snipe-IT: check-in/check-out automatizado, transições de status, gestão de substatus — tudo disparado por eventos do Jira</li>
+              <li data-i18n="exp2_li4">Schedulers automatizados (5 min) para manutenção, validação de stock requests, rastreamento de replacement e geração de PDFs</li>
+              <li data-i18n="exp2_li5">Integração JAMF Pro / DEP para validação de prestage ZTD</li>
+              <li data-i18n="exp2_li6">Sistema de e-mails multilíngues (BR, MX, CO) com AWS SES para onboarding de novos colaboradores</li>
+              <li data-i18n="exp2_li7">Geração de declarações PDF criptografadas com entrega automática via Slack DM</li>
             </ul>
           </div>
         </div>
 
         <div class="timeline-item">
           <div class="timeline-marker"></div>
-          <div class="timeline-date">Nov 2022 — Ago 2024</div>
+          <div class="timeline-date" data-i18n="exp3_date">Nov 2022 — Ago 2024</div>
           <div class="timeline-card">
             <div class="timeline-header">
-              <h3>Especialista em Logística e Onboarding</h3>
+              <h3 data-i18n="exp3_role">Especialista em Logística e Onboarding</h3>
               <span class="timeline-company">Nubank <span class="via">via Unique</span></span>
-              <span class="timeline-location">Presencial · São Paulo, SP</span>
+              <span class="timeline-location" data-i18n="exp3_location">Presencial · São Paulo, SP</span>
             </div>
             <ul class="timeline-list">
-              <li>Planejamento e execução de logística de kits de onboarding de TI em escala para o Nubank em todo o Brasil</li>
-              <li>Gestão de controle de custos de frete, coordenação com fornecedores e operações de alto volume</li>
-              <li>Desenvolvimento de expertise em fluxos operacionais e gestão de estoque, criando base para transição para TI</li>
+              <li data-i18n="exp3_li1">Planejamento e execução de logística de kits de onboarding de TI em escala para o Nubank em todo o Brasil</li>
+              <li data-i18n="exp3_li2">Gestão de controle de custos de frete, coordenação com fornecedores e operações de alto volume</li>
+              <li data-i18n="exp3_li3">Desenvolvimento de expertise em fluxos operacionais e gestão de estoque, criando base para transição para TI</li>
             </ul>
           </div>
         </div>
@@ -164,15 +184,15 @@
 
   <section class="section projetos" id="projetos">
     <div class="container">
-      <div class="section-label">03 — Projetos</div>
-      <h2 class="section-title">Projetos & Conquistas</h2>
+      <div class="section-label" data-i18n="proj_label">03 — Projetos</div>
+      <h2 class="section-title" data-i18n="proj_title">Projetos & Conquistas</h2>
 
       <div class="projects-grid">
         <div class="project-card project-featured">
           <div class="project-icon">&#9881;</div>
-          <div class="project-badge">Principal</div>
+          <div class="project-badge" data-i18n="proj_badge">Principal</div>
           <h3>Operária</h3>
-          <p class="project-desc">
+          <p class="project-desc" data-i18n="proj1_desc">
             Plataforma modular de automação (FastAPI + OAuth2) integrando Jira, Snipe-IT, JAMF Pro, Okta, 
             Slack, AWS SES e Rudder. Substituiu horas de trabalho manual diário por automações agendadas 
             rodando a cada 5 minutos em 10+ workflows distintos.
@@ -185,7 +205,7 @@
         <div class="project-card">
           <div class="project-icon">&#8644;</div>
           <h3>Jira ↔ Snipe-IT</h3>
-          <p class="project-desc">
+          <p class="project-desc" data-i18n="proj2_desc">
             Integração completa via API criando automaticamente registros de manutenção, atualizando status 
             e localizações no Snipe-IT com base em eventos e transições de status no Jira.
           </p>
@@ -197,7 +217,7 @@
         <div class="project-card">
           <div class="project-icon">&#128230;</div>
           <h3>Stock Requests Automation</h3>
-          <p class="project-desc">
+          <p class="project-desc" data-i18n="proj3_desc">
             Pipeline multi-etapas validando solicitações de laptops — cruzando inventário Snipe-IT, 
             enrolment DEP no JAMF Pro e vencimento de leasing, roteando ativos e criando tickets 
             automaticamente.
@@ -210,7 +230,7 @@
         <div class="project-card">
           <div class="project-icon">&#128172;</div>
           <h3>Slack Reports & PDF</h3>
-          <p class="project-desc">
+          <p class="project-desc" data-i18n="proj4_desc">
             Pipeline Python consultando o Jira e enviando reports estruturados e declarações PDF 
             criptografadas via Slack DM — eliminando processos totalmente manuais.
           </p>
@@ -225,15 +245,15 @@
   <section class="section skills" id="skills">
     <div class="container">
       <div class="section-label">04 — Skills</div>
-      <h2 class="section-title">Competências Técnicas</h2>
+      <h2 class="section-title" data-i18n="skills_title">Competências Técnicas</h2>
 
       <div class="skills-grid">
         <div class="skill-category">
-          <h3>Linguagens & Scripting</h3>
+          <h3 data-i18n="skill_cat1">Linguagens & Scripting</h3>
           <div class="skill-items">
-            <div class="skill-item"><span class="skill-dot primary"></span>Python (produção)</div>
+            <div class="skill-item"><span class="skill-dot primary"></span><span data-i18n="skill_python">Python (produção)</span></div>
             <div class="skill-item"><span class="skill-dot primary"></span>Shell / Bash</div>
-            <div class="skill-item"><span class="skill-dot secondary"></span>Clojure (funcional)</div>
+            <div class="skill-item"><span class="skill-dot secondary"></span><span data-i18n="skill_clojure">Clojure (funcional)</span></div>
           </div>
         </div>
 
@@ -248,27 +268,27 @@
         </div>
 
         <div class="skill-category">
-          <h3>Automação & Integração</h3>
+          <h3 data-i18n="skill_cat3">Automação & Integração</h3>
           <div class="skill-items">
             <div class="skill-item"><span class="skill-dot primary"></span>REST APIs</div>
             <div class="skill-item"><span class="skill-dot primary"></span>Webhooks</div>
             <div class="skill-item"><span class="skill-dot primary"></span>Workflows</div>
-            <div class="skill-item"><span class="skill-dot primary"></span>Integração entre sistemas</div>
+            <div class="skill-item"><span class="skill-dot primary"></span><span data-i18n="skill_integration">Integração entre sistemas</span></div>
           </div>
         </div>
 
         <div class="skill-category">
-          <h3>Jira (Avançado)</h3>
+          <h3 data-i18n="skill_cat4">Jira (Avançado)</h3>
           <div class="skill-items">
-            <div class="skill-item"><span class="skill-dot primary"></span>Automação via API</div>
-            <div class="skill-item"><span class="skill-dot primary"></span>Ciclo de vida de tickets</div>
+            <div class="skill-item"><span class="skill-dot primary"></span><span data-i18n="skill_jira1">Automação via API</span></div>
+            <div class="skill-item"><span class="skill-dot primary"></span><span data-i18n="skill_jira2">Ciclo de vida de tickets</span></div>
             <div class="skill-item"><span class="skill-dot primary"></span>Jira ↔ Snipe-IT</div>
-            <div class="skill-item"><span class="skill-dot primary"></span>Relatórios</div>
+            <div class="skill-item"><span class="skill-dot primary"></span><span data-i18n="skill_jira4">Relatórios</span></div>
           </div>
         </div>
 
         <div class="skill-category">
-          <h3>Plataformas & Ferramentas</h3>
+          <h3 data-i18n="skill_cat5">Plataformas & Ferramentas</h3>
           <div class="skill-items">
             <div class="skill-item"><span class="skill-dot primary"></span>Snipe-IT</div>
             <div class="skill-item"><span class="skill-dot primary"></span>Jamf Pro</div>
@@ -291,7 +311,7 @@
         </div>
 
         <div class="skill-category">
-          <h3>Device Management</h3>
+          <h3 data-i18n="skill_cat7">Device Management</h3>
           <div class="skill-items">
             <div class="skill-item"><span class="skill-dot primary"></span>Apple MDM</div>
             <div class="skill-item"><span class="skill-dot primary"></span>Zero Touch Deployment</div>
@@ -300,10 +320,10 @@
         </div>
 
         <div class="skill-category">
-          <h3>Boas Práticas</h3>
+          <h3 data-i18n="skill_cat8">Boas Práticas</h3>
           <div class="skill-items">
             <div class="skill-item"><span class="skill-dot primary"></span>Git</div>
-            <div class="skill-item"><span class="skill-dot primary"></span>Documentação técnica</div>
+            <div class="skill-item"><span class="skill-dot primary"></span><span data-i18n="skill_docs">Documentação técnica</span></div>
             <div class="skill-item"><span class="skill-dot secondary"></span>Agile / Scrum</div>
             <div class="skill-item"><span class="skill-dot secondary"></span>SOPs</div>
           </div>
@@ -314,8 +334,8 @@
 
   <section class="section certificacoes" id="certificacoes">
     <div class="container">
-      <div class="section-label">05 — Certificações & Formação</div>
-      <h2 class="section-title">Certificações</h2>
+      <div class="section-label" data-i18n="certs_label">05 — Certificações & Formação</div>
+      <h2 class="section-title" data-i18n="certs_title">Certificações</h2>
 
       <div class="certs-grid">
         <div class="cert-card">
@@ -325,13 +345,13 @@
         </div>
         <div class="cert-card">
           <div class="cert-year">2025</div>
-          <h3>Desenvolvimento OO com Python</h3>
-          <p>10h · Fundação Bradesco</p>
+          <h3 data-i18n="cert2_name">Desenvolvimento OO com Python</h3>
+          <p data-i18n="cert2_desc">10h · Fundação Bradesco</p>
         </div>
         <div class="cert-card">
           <div class="cert-year">2025</div>
-          <h3>Interface Gráfica com Python</h3>
-          <p>10h · Fundação Bradesco</p>
+          <h3 data-i18n="cert3_name">Interface Gráfica com Python</h3>
+          <p data-i18n="cert3_desc">10h · Fundação Bradesco</p>
         </div>
         <div class="cert-card">
           <div class="cert-year">—</div>
@@ -341,27 +361,27 @@
       </div>
 
       <div class="education-block">
-        <h2 class="section-title" style="margin-top: 4rem;">Formação</h2>
+        <h2 class="section-title" style="margin-top: 4rem;" data-i18n="edu_title">Formação</h2>
         <div class="cert-card education-card">
           <div class="cert-year">&#127891;</div>
-          <h3>Curso Técnico em Tecnologia da Informação</h3>
+          <h3 data-i18n="edu_name">Curso Técnico em Tecnologia da Informação</h3>
           <p>E.E Professor Newton Espírito Santo Ayres · São Paulo, SP</p>
         </div>
       </div>
 
       <div class="languages-block">
-        <h2 class="section-title" style="margin-top: 4rem;">Idiomas</h2>
+        <h2 class="section-title" style="margin-top: 4rem;" data-i18n="lang_title">Idiomas</h2>
         <div class="languages-grid">
           <div class="lang-card">
             <span class="lang-flag">&#127463;&#127479;</span>
-            <h3>Português</h3>
-            <p>Nativo</p>
+            <h3 data-i18n="lang_pt">Português</h3>
+            <p data-i18n="lang_pt_level">Nativo</p>
             <div class="lang-bar"><div class="lang-fill" style="width: 100%"></div></div>
           </div>
           <div class="lang-card">
             <span class="lang-flag">&#127468;&#127463;</span>
-            <h3>Inglês</h3>
-            <p>Básico (em desenvolvimento)</p>
+            <h3 data-i18n="lang_en">Inglês</h3>
+            <p data-i18n="lang_en_level">Básico (em desenvolvimento)</p>
             <div class="lang-bar"><div class="lang-fill" style="width: 35%"></div></div>
           </div>
         </div>
@@ -371,9 +391,9 @@
 
   <section class="section contato" id="contato">
     <div class="container">
-      <div class="section-label">06 — Contato</div>
-      <h2 class="section-title">Vamos conversar?</h2>
-      <p class="contato-desc">
+      <div class="section-label" data-i18n="contact_label">06 — Contato</div>
+      <h2 class="section-title" data-i18n="contact_title">Vamos conversar?</h2>
+      <p class="contato-desc" data-i18n="contact_desc">
         Estou sempre aberto a novos desafios e oportunidades. Se quiser trocar uma ideia sobre 
         automação, DevOps ou qualquer projeto interessante, me manda uma mensagem.
       </p>
@@ -402,7 +422,7 @@
 
   <footer class="footer">
     <div class="container">
-      <p>&lt;gsm /&gt; · Feito com código e café · 2026</p>
+      <p data-i18n="footer">&lt;gsm /&gt; · Feito com código e café · 2026</p>
     </div>
   </footer>
 
