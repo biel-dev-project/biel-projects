@@ -206,23 +206,25 @@ body {
 }
 
 .intro-pre {
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: var(--pink-light);
-  letter-spacing: 0.12em;
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
   min-height: 1.5em;
+  text-shadow: 0 0 20px rgba(236, 72, 153, 0.6), 0 0 60px rgba(236, 72, 153, 0.3);
 }
 
 .intro-pre .cursor-blink {
   display: inline-block;
-  width: 2px;
-  height: 1em;
-  background: var(--pink);
-  margin-left: 2px;
+  width: 3px;
+  height: 1.1em;
+  background: #fff;
+  margin-left: 3px;
   vertical-align: middle;
-  animation: blink 1s infinite;
+  animation: blink 0.8s infinite;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
 }
 
 @keyframes blink {
