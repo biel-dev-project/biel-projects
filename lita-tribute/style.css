@@ -50,6 +50,96 @@ body {
   border: 1px solid var(--glass-border);
 }
 
+/* =================== LANGUAGE SWITCHER =================== */
+
+.lang-switcher {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.lang-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(18, 18, 30, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: var(--text-secondary);
+  font-family: var(--font);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 7px 14px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.lang-btn:hover {
+  border-color: var(--border-glow);
+  color: var(--text);
+  box-shadow: 0 4px 20px rgba(236, 72, 153, 0.1);
+}
+
+#langFlag { font-size: 1rem; line-height: 1; }
+
+.lang-arrow { font-size: 0.6rem; opacity: 0.5; transition: var(--transition); }
+
+.lang-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: rgba(18, 18, 30, 0.9);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 6px;
+  min-width: 155px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: var(--transition);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+}
+
+.lang-dropdown.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.lang-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 9px 14px;
+  background: none;
+  border: none;
+  border-radius: 8px;
+  color: var(--text-secondary);
+  font-family: var(--font);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.lang-option:hover {
+  background: rgba(255,255,255,0.05);
+  color: var(--text);
+}
+
+.lang-option.active {
+  background: rgba(236, 72, 153, 0.12);
+  color: var(--pink-light);
+}
+
+.lang-option span { font-size: 1.1rem; line-height: 1; }
+
 /* =================== FLOATING HEARTS =================== */
 
 .floating-hearts {
@@ -701,6 +791,12 @@ body {
   .tribute-tl-dot { left: -32px; width: 14px; height: 14px; }
   .tribute-tl-dot.active { left: -34px; width: 18px; height: 18px; }
   .tribute-timeline::before { left: 6px; }
+}
+
+@media (max-width: 768px) {
+  .lang-switcher { top: 14px; right: 14px; }
+  #langLabel { display: none; }
+  .lang-btn { padding: 6px 10px; }
 }
 
 @media (max-width: 480px) {
