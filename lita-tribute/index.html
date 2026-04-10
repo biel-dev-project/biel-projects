@@ -11,13 +11,22 @@
 </head>
 <body>
 
-  <!-- INTRO: Heart animation -->
+  <!-- Floating hearts background -->
+  <div class="floating-hearts" id="floatingHearts"></div>
+
+  <!-- INTRO: Heart particle animation -->
   <section class="intro" id="intro">
     <canvas id="heartCanvas"></canvas>
     <div class="intro-content">
-      <div class="intro-pre">Obrigado por tudo</div>
+      <div class="intro-sparkle">✦</div>
+      <div class="intro-pre" id="typingPre"></div>
       <h1 class="intro-name">Lita</h1>
       <div class="intro-sub">6 anos de histórias, risadas e muito amor 💜</div>
+      <div class="intro-badges">
+        <span class="intro-badge">🖥️ Snipe-IT Queen</span>
+        <span class="intro-badge">⚽ Inter ❤️</span>
+        <span class="intro-badge">💜 6 anos de Nubank</span>
+      </div>
     </div>
     <div class="scroll-hint">
       <span>Role para baixo</span>
@@ -25,21 +34,98 @@
     </div>
   </section>
 
-  <!-- MENSAGEM -->
+  <!-- COUNTER STATS -->
+  <section class="section stats-section" id="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card-tribute">
+          <span class="stat-icon">📅</span>
+          <span class="stat-number-tribute" data-target="6">0</span>
+          <span class="stat-label-tribute">Anos no time</span>
+        </div>
+        <div class="stat-card-tribute">
+          <span class="stat-icon">💜</span>
+          <span class="stat-number-tribute" data-target="2190">0</span>
+          <span class="stat-label-tribute">Dias de dedicação</span>
+        </div>
+        <div class="stat-card-tribute">
+          <span class="stat-icon">∞</span>
+          <span class="stat-number-tribute special">∞</span>
+          <span class="stat-label-tribute">Saudades que vão ficar</span>
+        </div>
+        <div class="stat-card-tribute">
+          <span class="stat-icon">🚀</span>
+          <span class="stat-number-tribute" data-target="1">0</span>
+          <span class="stat-label-tribute">Novo capítulo incrível</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENSAGEM PRINCIPAL -->
   <section class="section message-section" id="mensagem">
     <div class="container">
-      <div class="message-card">
+      <div class="message-card glass">
+        <div class="message-glow"></div>
         <div class="quote-mark">"</div>
         <p class="message-text">
-          Algumas pessoas passam pela nossa vida e deixam marcas que nenhum tempo apaga. 
-          Você é uma dessas pessoas, Lita. <strong>6 anos</strong> de dedicação, parceria 
-          e muito coração nesse time. Cada workflow que funciona, cada onboarding que deu certo, 
-          cada problema que resolvemos juntos — tem um pedaço seu em tudo isso.
+          Lita sempre foi uma pessoa <strong>fundamental</strong> para o time todo. 
+          Uma inspiração de verdade — especialmente para os apaixonados por código, 
+          automações e tudo que envolve fazer as coisas funcionarem melhor.
         </p>
         <p class="message-text">
-          Esse novo capítulo é merecido. Vai lá e brilha — como sempre fez aqui. 💜
+          Quando a gente ouve o nome <strong class="highlight-pink">Lita</strong>, 
+          já vem o <strong>Snipe-IT</strong> na cabeça! Ela é sinônimo de domínio, 
+          referência e resolução. 
         </p>
-        <div class="message-from">— Com carinho, do time DMP</div>
+        <p class="message-text">
+          E o time dela? É o <strong class="highlight-red">Internacional</strong>, 
+          ALA PATRICK! ⚽❤️ Aquela raça, aquela garra — é a cara dela.
+        </p>
+        <p class="message-text">
+          Desejamos tudo de bom nessa nova jornada, porque temos a certeza 
+          que ela vai <strong>voar ainda mais longe</strong>. 🚀
+        </p>
+        <div class="message-from">— Com carinho, do time DMP 💜</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUEM É A LITA -->
+  <section class="section identity-section" id="identidade">
+    <div class="container">
+      <h2 class="section-title">Quando você fala "Lita", a gente pensa em...</h2>
+      <div class="identity-grid">
+        <div class="identity-card">
+          <div class="identity-emoji">🖥️</div>
+          <h3>Snipe-IT</h3>
+          <p>Mestre absoluta. Se existe inventário funcionando, a Lita teve dedo nisso.</p>
+        </div>
+        <div class="identity-card">
+          <div class="identity-emoji">⚡</div>
+          <h3>Automação</h3>
+          <p>Inspiração pra todo mundo que ama código. Se dá pra automatizar, a Lita automatiza.</p>
+        </div>
+        <div class="identity-card">
+          <div class="identity-emoji">⚽</div>
+          <h3>Inter ❤️</h3>
+          <p>ALA PATRICK! Colorada raiz. Aquela garra que ela tem no trabalho vem de berço.</p>
+        </div>
+        <div class="identity-card">
+          <div class="identity-emoji">🧠</div>
+          <h3>Referência</h3>
+          <p>Dúvida? Pergunta pra Lita. Problema? A Lita resolve. Sempre foi assim.</p>
+        </div>
+        <div class="identity-card">
+          <div class="identity-emoji">💜</div>
+          <h3>Coração</h3>
+          <p>Não é só técnica — é parceria, risada, apoio. Uma pessoa que faz o time melhor.</p>
+        </div>
+        <div class="identity-card">
+          <div class="identity-emoji">🚀</div>
+          <h3>Voar longe</h3>
+          <p>Sempre foi grande demais pro nosso time. Agora vai mostrar pro mundo todo.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -47,10 +133,9 @@
   <!-- GALERIA DE FOTOS -->
   <section class="section gallery-section" id="galeria">
     <div class="container">
-      <h2 class="section-title">Momentos que ficam</h2>
-      <p class="section-subtitle">Fotos que contam a nossa história</p>
+      <h2 class="section-title">Momentos que ficam pra sempre</h2>
+      <p class="section-subtitle">📸 Cada foto é uma história</p>
       <div class="gallery-grid" id="galleryGrid">
-        <!-- Placeholder slots — substitua os src pelas fotos reais -->
         <div class="gallery-item large">
           <div class="gallery-placeholder">
             <span>📸</span>
@@ -101,15 +186,15 @@
   <section class="section video-section" id="video">
     <div class="container">
       <h2 class="section-title">Um recado especial</h2>
-      <p class="section-subtitle">Gravado com o coração 💜</p>
-      <div class="video-wrapper">
+      <p class="section-subtitle">🎬 Gravado com o coração</p>
+      <div class="video-wrapper glass">
         <div class="video-placeholder" id="videoPlaceholder">
           <span>🎬</span>
           <p>Coloque o vídeo aqui</p>
           <small>Renomeie para assets/video.mp4</small>
         </div>
         <!-- Descomente e apague o placeholder quando tiver o vídeo:
-        <video controls playsinline>
+        <video controls playsinline poster="assets/video-thumb.jpg">
           <source src="assets/video.mp4" type="video/mp4">
         </video>
         -->
@@ -117,7 +202,7 @@
     </div>
   </section>
 
-  <!-- TIMELINE DE MOMENTOS -->
+  <!-- TIMELINE -->
   <section class="section timeline-section" id="timeline">
     <div class="container">
       <h2 class="section-title">6 anos em um piscar de olhos</h2>
@@ -125,33 +210,41 @@
         <div class="tribute-tl-item">
           <div class="tribute-tl-dot"></div>
           <div class="tribute-tl-year">2019</div>
-          <div class="tribute-tl-card">
-            <h3>O começo</h3>
-            <p>Lita chegou no time e desde o primeiro dia já mostrou que veio pra fazer diferença.</p>
+          <div class="tribute-tl-card glass">
+            <h3>🌱 O começo</h3>
+            <p>Lita chegou no time e desde o primeiro dia já mostrou que veio pra fazer diferença. A energia era outra.</p>
           </div>
         </div>
         <div class="tribute-tl-item">
           <div class="tribute-tl-dot"></div>
           <div class="tribute-tl-year">2020–2021</div>
-          <div class="tribute-tl-card">
-            <h3>Crescimento</h3>
-            <p>Mesmo em tempos difíceis, manteve o time unido e os processos funcionando.</p>
+          <div class="tribute-tl-card glass">
+            <h3>💪 Resiliência</h3>
+            <p>Pandemia, home office, caos — e a Lita lá, firme, mantendo o time unido e os processos rodando. Raça de colorada.</p>
           </div>
         </div>
         <div class="tribute-tl-item">
           <div class="tribute-tl-dot"></div>
-          <div class="tribute-tl-year">2022–2024</div>
-          <div class="tribute-tl-card">
-            <h3>Referência</h3>
-            <p>Se tornou peça fundamental — quem tem dúvida, pergunta pra Lita.</p>
+          <div class="tribute-tl-year">2022–2023</div>
+          <div class="tribute-tl-card glass">
+            <h3>👑 Referência</h3>
+            <p>Se tornou a pessoa que todo mundo procura. Snipe-IT? Lita. Automação? Lita. Dúvida? Lita. Simples assim.</p>
           </div>
         </div>
         <div class="tribute-tl-item">
           <div class="tribute-tl-dot"></div>
+          <div class="tribute-tl-year">2024</div>
+          <div class="tribute-tl-card glass">
+            <h3>⚡ Inspiração</h3>
+            <p>Inspirou uma geração de apaixonados por código e automação. O legado já tava construído.</p>
+          </div>
+        </div>
+        <div class="tribute-tl-item">
+          <div class="tribute-tl-dot active"></div>
           <div class="tribute-tl-year">2025</div>
-          <div class="tribute-tl-card">
-            <h3>Novo capítulo 💜</h3>
-            <p>O time muda, mas a marca que você deixou aqui é pra sempre.</p>
+          <div class="tribute-tl-card glass featured-card">
+            <h3>🚀 Novo capítulo</h3>
+            <p>O time muda, mas a marca que você deixou é eterna. Vai voar ainda mais longe, Lita. A gente tem certeza.</p>
           </div>
         </div>
       </div>
@@ -161,22 +254,23 @@
   <!-- DEPOIMENTOS -->
   <section class="section quotes-section" id="depoimentos">
     <div class="container">
-      <h2 class="section-title">O que dizem sobre a Lita</h2>
+      <h2 class="section-title">O que o time diz sobre a Lita</h2>
+      <p class="section-subtitle">💬 Direto do coração</p>
       <div class="quotes-grid">
-        <div class="quote-card">
+        <div class="quote-card glass">
           <p>"Lita é daquelas pessoas que resolve o problema antes de você terminar de explicar."</p>
           <span class="quote-author">— Colega 1</span>
         </div>
-        <div class="quote-card">
+        <div class="quote-card glass">
           <p>"Trabalhar com ela é aprender todo dia. Vou sentir falta das risadas no meio do caos."</p>
           <span class="quote-author">— Colega 2</span>
         </div>
-        <div class="quote-card">
-          <p>"6 anos e ela nunca perdeu a energia. Lita, você é inspiração pra todo mundo aqui."</p>
+        <div class="quote-card glass">
+          <p>"Quando fala Lita, pensa Snipe-IT. Quando fala dedicação, pensa Lita. Simples."</p>
           <span class="quote-author">— Colega 3</span>
         </div>
-        <div class="quote-card featured">
-          <p>"Obrigado por tudo, Lita. Esse time nunca vai ser o mesmo sem você — e isso é um elogio."</p>
+        <div class="quote-card glass featured">
+          <p>"Obrigado por tudo, Lita. Esse time nunca vai ser o mesmo sem você — e isso é o maior elogio que a gente pode fazer. Vai voar! 🚀"</p>
           <span class="quote-author">— O time inteiro 💜</span>
         </div>
       </div>
@@ -185,13 +279,18 @@
 
   <!-- FINAL -->
   <section class="section final-section" id="final">
-    <div class="container">
-      <div class="final-heart">💜</div>
-      <h2 class="final-title">Boa sorte, Lita!</h2>
-      <p class="final-subtitle">Você sempre terá um lugar aqui. Vai brilhar no próximo capítulo!</p>
+    <canvas id="finalCanvas"></canvas>
+    <div class="container final-container">
+      <div class="final-heart" id="finalHeart">💜</div>
+      <h2 class="final-title">Voa longe, Lita!</h2>
+      <p class="final-subtitle">
+        Você sempre terá um lugar aqui. O próximo capítulo vai ser ainda mais incrível — 
+        porque quem tem essa garra não para nunca.
+      </p>
+      <div class="final-badge">ALA PATRICK! ⚽❤️</div>
       <div class="final-signature">
-        Com amor,<br>
-        <strong>Time DMP — Nubank</strong>
+        Com todo amor e saudade,<br>
+        <strong>Time DMP — Nubank 💜</strong>
       </div>
     </div>
   </section>
