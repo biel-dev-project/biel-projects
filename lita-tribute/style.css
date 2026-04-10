@@ -169,12 +169,14 @@ body {
 
 .intro {
   min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   position: relative;
   overflow: hidden;
+  padding: 0 24px;
 }
 
 #heartCanvas {
@@ -185,17 +187,27 @@ body {
   z-index: 0;
 }
 
-.intro-content {
+.intro-top {
   position: relative;
   z-index: 1;
   text-align: center;
+  padding-top: 10vh;
   animation: fadeInScale 1.2s ease-out 0.3s both;
+}
+
+.intro-bottom {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  margin-top: auto;
+  padding-bottom: 12vh;
+  animation: fadeInUp 1s ease-out 0.8s both;
 }
 
 .intro-sparkle {
   font-size: 1.5rem;
   color: var(--pink);
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   animation: sparkle-rotate 3s linear infinite;
 }
 
@@ -206,12 +218,12 @@ body {
 }
 
 .intro-pre {
-  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  font-size: clamp(1.4rem, 3.5vw, 2rem);
   font-weight: 700;
   color: #fff;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   min-height: 1.5em;
   text-shadow: 0 0 20px rgba(236, 72, 153, 0.6), 0 0 60px rgba(236, 72, 153, 0.3);
 }
@@ -234,7 +246,7 @@ body {
 
 .intro-name {
   font-family: var(--font-display);
-  font-size: clamp(5rem, 18vw, 12rem);
+  font-size: clamp(3rem, 10vw, 5.5rem);
   font-weight: 900;
   font-style: italic;
   background: var(--heart-gradient);
@@ -242,7 +254,7 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   line-height: 1;
-  margin-bottom: 16px;
+  margin-bottom: 0;
   filter: drop-shadow(0 0 60px rgba(236, 72, 153, 0.35));
   animation: nameGlow 3s ease-in-out infinite alternate;
 }
@@ -255,7 +267,7 @@ body {
 .intro-sub {
   font-size: 1.15rem;
   color: var(--text-secondary);
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .intro-badges {
@@ -285,14 +297,11 @@ body {
 }
 
 .scroll-hint {
-  position: absolute;
-  bottom: 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  z-index: 1;
-  animation: fadeInUp 1s ease-out 1.5s both;
+  margin-top: 20px;
 }
 
 .scroll-hint span {

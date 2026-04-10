@@ -173,8 +173,8 @@ function reTypeIntro(text) {
 
   function createParticles() {
     particles = [];
-    const scale = Math.min(width, height) * 0.02;
-    const cx = width / 2, cy = height / 2 - 20;
+    const scale = Math.min(width, height) * 0.016;
+    const cx = width / 2, cy = height * 0.5;
 
     for (let i = 0; i < COUNT; i++) {
       const t = (i / COUNT) * Math.PI * 2;
