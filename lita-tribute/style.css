@@ -548,6 +548,12 @@ body {
   max-height: 420px;
 }
 
+.gallery-grid.gallery-four {
+  grid-template-columns: 1fr 1fr;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
 .gallery-item {
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -557,7 +563,8 @@ body {
 }
 
 .gallery-grid.gallery-two .gallery-item,
-.gallery-grid.gallery-three .gallery-item {
+.gallery-grid.gallery-three .gallery-item,
+.gallery-grid.gallery-four .gallery-item {
   aspect-ratio: 3/4;
   border: 2px solid var(--border-glow);
   box-shadow: 0 8px 40px rgba(236, 72, 153, 0.08);
