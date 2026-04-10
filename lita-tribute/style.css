@@ -536,6 +536,18 @@ body {
   margin: 0 auto;
 }
 
+.gallery-grid.gallery-three {
+  grid-template-columns: 1fr 1fr;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.gallery-grid.gallery-three .gallery-item:last-child {
+  grid-column: 1 / -1;
+  aspect-ratio: 16/10;
+  max-height: 420px;
+}
+
 .gallery-item {
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -544,7 +556,8 @@ body {
   border: 1px solid var(--glass-border);
 }
 
-.gallery-grid.gallery-two .gallery-item {
+.gallery-grid.gallery-two .gallery-item,
+.gallery-grid.gallery-three .gallery-item {
   aspect-ratio: 3/4;
   border: 2px solid var(--border-glow);
   box-shadow: 0 8px 40px rgba(236, 72, 153, 0.08);
